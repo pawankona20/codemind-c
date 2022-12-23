@@ -1,22 +1,21 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-  int n, reversed = 0, remainder, original;
-    scanf("%d", &n);
-    original = n;
-
-    while (n != 0) 
+    int n,rem,rev=0;
+    scanf("%d",&n);
+    int t=n;
+    while(n!=0)
     {
-        remainder = n % 10;
-        reversed = reversed * 10 + remainder;
-        n /= 10;
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
     }
-
-
-    if (original == reversed)
+    if(rev==t)
+    {
         printf("True");
+    }
     else
+    {
         printf("False");
-
-    return 0;
+    }
 }
